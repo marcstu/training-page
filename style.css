@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.header{
+    background-color: rgb(30, 30, 41);
+    padding: 2em;
+}
+.container-main{
+    padding: 2em;
+    background-color:rgb(235, 235, 235);
+}
+.header h1{
+    font-size: 2.5em;
+    margin-bottom: .5em;
+    font-weight: 900;
+    letter-spacing: .5em;
+    color: orange;
+}
+.header p{
+    font-size: 1.3em;
+    color: white;
+}
+.container-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, auto));
+    grid-template-rows: 1fr;
+    justify-content: center;
+    gap: 2rem;
+}
+.card{
+    border: 2px solid rgb(179, 179, 179);
+    box-sizing: border-box;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.card-top{
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card-bottom{
+    background-color: rgb(202, 202, 202);
+    padding: 2em;
+    text-align: center;
+    border-bottom-left-radius: 18px;
+}
+.card-bottom > p{
+    line-height: 1.5;
+}
+.circle{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1em;
+}
+.purple{
+    background-color: purple;
+}
+.orange{
+    background-color: orange;
+}
+.pink{
+    background-color: hotpink;
+}
+.blue{
+    background-color: blue;
+}
+.navy{
+    background-color: navy;
+}
+.teal{
+    background-color: teal;
+}
+
+@media screen and (max-width: 420px){
+    .container-cards{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+@media screen and (min-width: 1553px){
+    .header{
+        display: flex;
+        justify-content: center;
+    }
+    .header div{
+        width: 1489px;
+        box-sizing: border-box;
+    }
+    .container-cards{
+        display: grid;
+        grid-template-columns: repeat(3, 475px);
+        justify-content: center;
+    }
+}
